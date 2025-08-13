@@ -2,24 +2,25 @@ import { useState } from "react";
 import { motion } from "motion/react";
 function Navigation() {
   return (
-    <ul className="nav-ul flex gap-4 list-none p-0 m-0 items-center">
-      <li className="nav-li">
-        <a className="nav-link" href="#home">
+    <ul className="nav-ul  flex flex-col items-center gap-4 sm:flex-row md:gap-6 relative z-20">
+      <li className="nav-li text-neutral-400 hover:text-white max-sm:w-full max-sm:rounded-md py-2 max-sm:px-5
+}">
+        <a className="nav-link text-lg md:text-base hover:text-white transition-colors" href="#home">
           Home
         </a>
       </li>
-      <li className="nav-li">
-        <a className="nav-link" href="#about">
+      <li className="nav-li text-neutral-400 hover:text-white max-sm:w-full max-sm:rounded-md py-2 max-sm:px-5">
+        <a className="nav-link text-lg md:text-base hover:text-white transition-colors" href="#about">
           About
         </a>
       </li>
-      <li className="nav-li">
-        <a className="nav-link" href="#work">
+      <li className="nav-li text-neutral-400 hover:text-white max-sm:w-full max-sm:rounded-md py-2 max-sm:px-5">
+        <a className="nav-link text-lg md:text-base hover:text-white transition-colors" href="#work">
           Work
         </a>
       </li>
-      <li className="nav-li">
-        <a className="nav-link" href="#contact">
+      <li className="nav-li text-neutral-400 hover:text-white max-sm:w-full max-sm:rounded-md py-2 max-sm:px-5">
+        <a className="nav-link text-lg md:text-base hover:text-white transition-colors" href="#contact">
           Contact
         </a>
       </li>
@@ -34,13 +35,13 @@ const Navbar = () => {
         <div className="flex items-center justify-between py-2 sm:py-0">
           <a
             href="/"
-            className="text-xl font-bold transition-colors text-neutral-400 hover:text-white"
+            className="text-xl font-bold transition-colors text-neutral-400 hover:text-white  px-4 py-4"
           >
             Ojas
           </a>
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="flex cursor-pointer text-neutral-400 hover:text-white focus:outline-none sm:hidden"
+            className="flex cursor-pointer text-neutral-400 hover:text-white focus:outline-none sm:hidden relative px-1 py-4 text-sm text-center rounded-full font-extralight bg-primary w-[5rem] cursor-pointer overflow-hidden"
           >
             <img
               src={isOpen ? "assets/close.svg" : "assets/menu.svg"}
