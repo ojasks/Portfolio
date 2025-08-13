@@ -19,6 +19,7 @@ export function Frameworks() {
     "vitejs",
     "wordpress",
   ];
+  
   return (
     <div className="relative flex h-[15rem] w-full flex-col items-center justify-center">
       <OrbitingCircles iconSize={40}>
