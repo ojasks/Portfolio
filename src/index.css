@@ -28,3 +28,8 @@ body {
 .animate-orbit {
   animation: orbit var(--duration, 20s) linear infinite;
 }
+
+
+.text-sand {
+  color: var(--color-sand);
+}
