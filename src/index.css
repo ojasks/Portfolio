@@ -11,6 +11,26 @@ body {
   overflow-x: hidden;
 }
 
+:root {
+  --color-primary: #030412;
+  --color-midnight: #06091f;
+  --color-navy: #161a31;
+  --color-indigo: #1f1e39;
+  --color-storm: #282b4b;
+  --color-aqua: #33c2cc;
+  --color-mint: #57db96;
+  --color-royal: #5c33cc;
+  --color-lavender: #7a57db;
+  --color-fuchsia: #ca2f8c;
+  --color-orange: #cc6033;
+  --color-sand: #d6995c;
+  --color-coral: #ea4884;
+  --animate-orbit: orbit 50s linear infinite;
+
+    --animate-marquee: marquee 20s linear infinite;
+  --animate-marquee-vertical: marquee-vertical 20s linear infinite;
+}
+
 
 @keyframes orbit {
   0% {
@@ -25,6 +45,35 @@ body {
   }
 }
 
+   .animate-marquee {
+  animation: var(--animate-marquee);
+} 
+
+.animate-marquee-vertical {
+  animation: var(--animate-marquee-vertical);
+} 
+.animation-reverse {
+  animation-direction: reverse;
+}
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+  }
+}
+
+@keyframes marquee-vertical {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(calc(-100% - var(--gap)));
+  }
+}
+    
+
 .animate-orbit {
   animation: orbit var(--duration, 20s) linear infinite;
 }
@@ -32,4 +81,12 @@ body {
 
 .text-sand {
   color: var(--color-sand);
+}
+.review-card {
+  border: 1px solid rgba(255, 255, 255, 0.1); /* border-gray-50/[.1] */
+  background-image: linear-gradient(to right, var(--color-indigo), var(--color-storm));
+}
+
+.review-card:hover {
+  color: var(--color-mint);
 }
