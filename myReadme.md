@@ -5,4 +5,4 @@ in our vite.config.js we are going to add import our tailwind and also add the f
 
 
  flip words
- 
+ email.js
